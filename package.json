@@ -1,0 +1,30 @@
+{
+  "name": "typescript-generics-and-mapped-types",
+  "version": "0.0.1",
+  "description": "Code snippets for typescript presentation",
+  "main": "index.ts",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack-dev-server --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Reshetnyak/typescript-generics-and-mapped-types.git"
+  },
+  "author": "Denis Reshetniak",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Reshetnyak/typescript-generics-and-mapped-types/issues"
+  },
+  "homepage": "https://github.com/Reshetnyak/typescript-generics-and-mapped-types#readme",
+  "devDependencies": {
+    "awesome-typescript-loader": "^5.0.0",
+    "clean-webpack-plugin": "^0.1.19",
+    "html-webpack-plugin": "^3.2.0",
+    "source-map-loader": "^0.2.3",
+    "typescript": "^2.8.3",
+    "webpack": "^4.8.1",
+    "webpack-cli": "^2.1.3",
+    "webpack-dev-server": "^3.1.4"
+  }
+}
