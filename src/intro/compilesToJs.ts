@@ -1,4 +1,4 @@
-enum Categories {
+const enum Categories {
   Laptops,
   Phones,
   Tablets
@@ -31,23 +31,3 @@ class Component {
     this.user = await this.userService.getUser(1);
   }
 }
-
-// js analog
-/*
-class UserService {
-  get USER_API_URL() { return 'https://api.myjson.com/bins/te31j' };
-  getUser(id) {
-    return fetch(this.USER_API_URL)
-      .then(response => response.json());
-  }
-}
-
-class Component {
-  constructor(userService) {
-    this.userService = userService;
-  }
-  async onInit() {
-    this.user = await this.userService.getUser(1);
-  }
-}
-*/
