@@ -3,41 +3,29 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.ts',
-  output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
-  },
-
-  // Enable sourcemaps for debugging webpack's output.
-  devtool: 'source-map',
-  devServer: {
-    contentBase: './dist'
-  },
-
-  resolve: {
-    // Add '.ts' and '.tsx' as resolvable extensions.
-    extensions: ['.ts', '.tsx', '.js', '.json']
-  },
-
-  plugins: [
-    new CleanWebpackPlugin(['dist'])
-  ],
-
+  entry: "./src/index.ts",
   module: {
-    rules: [
-      // All files with a '.ts' or '.tsx' extension will be handled by 'awesome-typescript-loader'.
-      {
-        test: /\.tsx?$/,
-        loader: 'awesome-typescript-loader'
-      },
-
-      // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
-      {
-        enforce: 'pre',
-        test: /\.js$/,
-        loader: 'source-map-loader'
-      }
-    ]
-  }
+    rules: [{
+      test: /\.ts$/,
+      exclude: path.resolve(__dirname, "node_modules"),
+      loader: "awesome-typescript-loader"
+    }],
+  },
+  resolve: {
+    modules: [
+      __dirname,
+      path.resolve(__dirname, "src"),
+      "node_modules"
+    ],
+    extensions: ['.ts', '.js'],
+  },
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js',
+    publicPath: 'dist'
+  },
+  devServer: {
+    contentBase: __dirname
+  },
+  devtool: "source-map"
 };
