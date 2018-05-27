@@ -1,5 +1,5 @@
-import { UserService } from './user.service';
 import { User } from './model';
+import { UserService } from './user.service';
 
 export class AppComponent {
   user: User;
