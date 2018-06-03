@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack",
     "start": "webpack-dev-server --open",
-    "compile": "tsc src/intro/compilesToJs.ts --target ESNext"
+    "compile": "tsc src/intro/superset/superset.ts --noEmitOnError"
   },
   "repository": {
     "type": "git",

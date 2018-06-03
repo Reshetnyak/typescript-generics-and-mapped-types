@@ -1,27 +1,15 @@
-import { bind } from 'decko';
-
-enum Categories {
-  Laptops,
-  Phones,
-  None = 'uncotegorized'
+const enum Role {
+  Regular,
+  Admin,
+  New = 'Not recognized'
 }
 
-
-const product = {
-  category: Categories.Phones,
-  id: '111',
-};
-
-class AppComponent {
-  category: Categories.Phones;
-  constructor(private message: string) { }
-
-  onInit(): void {
-    window.addEventListener('click', this.greet);
-  }
-
-  @bind()
-  greet(): void {
-    alert(this.message);
-  }
+class User {
+  created: Date = new Date();
+  constructor(public role: Role, public nickName?: string) {}
 }
+
+const Bob = new User(Role.New);
+
+Role = 'hello'; // error
+Role.Admin = 1; // error

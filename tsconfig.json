@@ -3,8 +3,9 @@
     "outDir": "./dist/",
     "module": "commonjs",
     "noImplicitAny": true,
+    "noEmitOnError": true,
     "removeComments": true,
-    "preserveConstEnums": true,
+    "preserveConstEnums": false,
     "sourceMap": true,
     "target": "es2015",
     "experimentalDecorators": true,
@@ -14,11 +15,12 @@
       "dom"
     ]
   },
-  "files": [
-    "index.ts"
-  ],
+  // "files": [
+  //   "src/index.ts",
+  //   "src/intro/superset/superset.ts"
+  // ],
   "exclude": [
     "node_modules",
-    "src/intro/**"
+    // "src/intro/**"
   ]
 }
