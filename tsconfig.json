@@ -17,12 +17,7 @@
       "dom"
     ]
   },
-  // "files": [
-  //   "src/index.ts",
-  //   "src/intro/superset/superset.ts"
-  // ],
   "exclude": [
-    "node_modules",
-    // "src/intro/**"
+    "node_modules"
   ]
 }

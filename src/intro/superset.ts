@@ -1,4 +1,4 @@
-const enum Role {
+enum Role {
   Regular,
   Admin,
   New = 'Not recognized'
