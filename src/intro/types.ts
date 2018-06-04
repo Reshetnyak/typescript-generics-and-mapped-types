@@ -47,14 +47,14 @@ expectsAnObject(Symbol()); // error
 
 // complex types
 
-const enum Category { // will not be put in transpiled code
+export const enum Category { // will not be put in transpiled code
   Phone,
   Tablet,
   Laptop,
   None = 'uncategorised'
 }
 
-interface Product {
+export interface Product {
   name: string;
   category: Category;
 }
