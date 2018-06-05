@@ -1,6 +1,6 @@
 import { Category, User, Product } from "../../intro/types";
 
-enum ApiUrls {
+export enum ApiUrl {
   Users = 'http://users.api/get',
   Products = 'http://products.api/get',
   Categories = 'http://categories.api/get'
@@ -12,10 +12,10 @@ function get<R>(url: string): Promise<R> {
 
 class SomeService {
   getUsers(): Promise<Array<User>> {
-    return get<Array<User>>(ApiUrls.Users);
+    return get<Array<User>>(ApiUrl.Users);
   }
   getCategories(): Promise<Array<Category>> {
-    return get<Array<Category>>(ApiUrls.Categories);
+    return get<Array<Category>>(ApiUrl.Categories);
   }
 }
 

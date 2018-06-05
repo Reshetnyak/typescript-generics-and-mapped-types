@@ -1,5 +1,5 @@
 import { person } from './index';
-import { Person } from './setPerson';
+import { Person } from '../interfaces';
 
 export function getKeys<T>(obj: T): Array<keyof T> {
   let keys: Array<keyof T> = [];
