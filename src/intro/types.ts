@@ -59,6 +59,11 @@ export interface Product {
   category: Category;
 }
 
+export interface User {
+  name: string;
+  age: number;
+}
+
 const alcatel: Product = {
   name: 'Alcatel X',
   category: Category.Phone

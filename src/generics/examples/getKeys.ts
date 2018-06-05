@@ -1,4 +1,5 @@
-import { person, Person } from './index';
+import { person } from './index';
+import { Person } from './setPerson';
 
 export function getKeys<T>(obj: T): Array<keyof T> {
   let keys: Array<keyof T> = [];

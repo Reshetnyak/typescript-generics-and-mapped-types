@@ -1,5 +1,6 @@
-import { person, Person } from './index';
+import { person } from './index';
 import { getKeys } from './getKeys';
+import { Person } from '../interfaces';
 
 function getValues<T>(obj: T): Array<T[keyof T]> {
   return getKeys(obj).map(k => obj[k]);
