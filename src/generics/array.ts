@@ -1,3 +1,5 @@
+// Simpliest Generic is an Array
+const names: Array<string> = ['1', '2', '3'];
 
 interface MyArray<T> {
   push(...items: T[]): number;
