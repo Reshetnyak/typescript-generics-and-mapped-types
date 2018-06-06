@@ -13,8 +13,8 @@ enum Category {
 
 interface ApiRequest<T, U> {
   url: ApiUrl;
-  type: T;
-  responseType?: U; 
+  readonly type: T;
+  readonly responseType?: U; 
 }
 
 interface UserRequest extends ApiRequest<
