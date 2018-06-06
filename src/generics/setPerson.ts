@@ -4,7 +4,7 @@ import { isDriver, isTeacher } from './typeGuards';
 function setPerson<T extends Person>(person: T): void {
   // if driver, validate categories
   if (person.categories) {
-    let isValid = ['A', 'B', 'C', 'D'].some(c => person.categories.includes(c));
+    let isValid = ['A', 'B', 'C', 'D'].some(c => person.categories.includes(c) );
     // save to database
   } else {
     // save teacher to database

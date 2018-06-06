@@ -1,9 +1,9 @@
-import { Driver, Teacher } from './interfaces';
+import { Driver, Teacher, Person } from './interfaces';
 
-export function isDriver(obj: Driver | Teacher): obj is Driver {
-    return obj.hasOwnProperty('categories');
+export function isDriver(person: Person): person is Driver {
+    return person.hasOwnProperty('categories') === true;
 }
 
-export function isTeacher(obj: Driver | Teacher): obj is Teacher {
-    return obj.hasOwnProperty('canTeach');
+export function isTeacher(person: Person): person is Teacher {
+    return person.hasOwnProperty('canTeach') === true;
 }
